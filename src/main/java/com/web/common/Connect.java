@@ -9,7 +9,7 @@ import java.net.URL;
 
 public final class Connect {
 
-	public static void connectPOST(String url, String body) throws IOException {
+	public static String connectPOST(String url, String body) throws IOException {
 		
 		URL obj = new URL(Constants.REST_URL + url);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -21,6 +21,7 @@ public final class Connect {
 		os.flush();
 		os.close();
 
+		StringBuffer response = new StringBuffer();
 		int responseCode = con.getResponseCode();
 		System.out.println("POST Response Code :: " + responseCode);
 
@@ -28,18 +29,17 @@ public final class Connect {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					con.getInputStream()));
 			String inputLine;
-			StringBuffer response = new StringBuffer();
 
 			while ((inputLine = in.readLine()) != null) {
 				response.append(inputLine);
 			}
 			in.close();
 
-			// print result
 			System.out.println(response.toString());
 		} else {
 			System.out.println("POST request not worked");
 		}
+		return response.toString();
 	}
 
 }

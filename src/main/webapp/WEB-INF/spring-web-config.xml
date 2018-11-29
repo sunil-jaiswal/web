@@ -26,4 +26,12 @@
  
 	<mvc:annotation-driven />
 	
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/*" />
+			<bean class="com.web.conf.Interceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
 </beans>

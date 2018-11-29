@@ -1,6 +1,5 @@
 $(document).off('click', '.login-btn-evnt').on('click', '.login-btn-evnt', function(){
 	var inputJSON = COMMON.formData.collect($('.login-form-div'));
-	debugger;
 	$.ajax({
 		type 		: 'post',
 		url  		: 'authenticate',
@@ -8,7 +7,7 @@ $(document).off('click', '.login-btn-evnt').on('click', '.login-btn-evnt', funct
 		contentType	: "application/json;charset=utf-8", 
 		dataType	: 'json', 
 		success		: function(response) {
-
+			console.log(response);
 		}
 	});
 });
@@ -25,4 +24,14 @@ $(document).off('click', '#join_me_evt').on('click', '#join_me_evt', function(){
 
 		}
 	});
+});
+
+
+// left sidebar click
+$(document).off('click', '.left-sidebar ul li').on('click', '.left-sidebar ul li', function(){
+	$('.left-sidebar ul li').removeClass('open');
+	$(this).addClass('open')
+	
+	
+	
 });

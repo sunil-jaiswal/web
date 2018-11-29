@@ -1,10 +1,11 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link href="<c:url value="/resources/images/fav.jpeg" />" rel="shortcut icon">
 	<script src="<c:url value="/resources/jslibrary/jquery-3.3.1.min.js" />"></script>
-	<link href="<c:url value="/resources/csslibrary/bootstrap.min.css" />" rel="stylesheet">
 	<script src="<c:url value="/resources/jslibrary/bootstrap.min.js" />"></script>
+	<link href="<c:url value="/resources/csslibrary/bootstrap.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/login.css" />" rel="stylesheet">
 	<script src="<c:url value="/resources/js/common.js" />"></script>
@@ -13,20 +14,9 @@
     <script src="<c:url value="/resources/js/main.js" />"></script> --%>
 </head>
 <body>
-<div class="page-header">
-	
-	<nav class="navbar navbar-light justify-content-between">
-	  <a class="navbar-brand">Navbar</a>
-	  <div class="login-form-div">
-		  <form class="form-inline">
-		    <input class="form-control mr-sm-2" type="text" name="userName" data-custom-input="input" placeholder="Email" aria-label="Search">
-		    <input class="form-control mr-sm-2" type="password" name="password" data-custom-input="input" placeholder="Password" aria-label="Search">
-		    <button class="btn btn-outline-success my-2 my-sm-0 login-btn-evnt" type="button">Login</button>
-		  </form>
-	  </div>
-	</nav> 
 
-</div>
+	<%-- <%@ include file = "loginheader.jsp" %> --%>
+	
 	<div class="login-form sign-up-form">
 	    <form class="add-box-shadow" action="/examples/actions/confirmation.php" method="post">
 	        <h3 class="text-center">Sign up</h3>   
@@ -77,6 +67,9 @@
 	    <!-- <p class="text-center text-muted small">Don't have an account? <a href="#">Sign up here!</a></p> -->
 	    <!-- http://jaybabani.com/complete-admin/v6.1/preview/fullmenu/index.html# 
 	    	https://getbootstrap.com/docs/4.0/components/forms/
+	    	https://www.maketecheasier.com/fix-no-sound-issue-ubuntu/
+	    	http://byrushan.com/projects/material-admin/app/2.5/
+	    	http://wrapbootstrap.com/preview/WB0048JF7
 	    -->
 	</div>
 </body>
