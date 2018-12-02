@@ -9,7 +9,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="<c:url value="/resources/js/dashboard.js" />"></script>
+    <script src="<c:url value="/resources/jslibrary/underscore-min.js" />"></script>
+    <script src="<c:url value="/resources/js/Utils.js" />"></script>
+  	 <script src="<c:url value="/resources/js/dashboard.js" />"></script>
   	
 	
 	
@@ -19,6 +21,9 @@
 			margin:0;
 			font-size: 14px;
 		}
+		
+		* {box-sizing: border-box;}
+		
 		.header{
 			background-color: #2b3643;
 			height:50px;
@@ -904,7 +909,7 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 	background-color:#c8d6e5;
 }
 
-.create-post-footer .file-btn, .news-feeds-footer .file-btn
+.create-post-footer .file-btn, .news-feeds-footer .file-btn, .compose-right .file-btn
 {
     display: none;
 }
@@ -1364,7 +1369,6 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 /** **/
 
 .online-users-container {
-	width: 80px;
 	margin-top: 50px;
 	position: absolute;
 	background-color: #2c3e50;
@@ -1430,6 +1434,126 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
     float: right;
 }
 
+.chat-popup .chat-u-img img {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 5px;
+}
+.chat-popup .header-user-body {
+	/* margin-left: 55px; */
+}
+
+.chat-popup .chat-u-name {
+	font-size: 18px;
+    line-height: 20px;
+}
+
+.chat-popup .message-count {
+	display: table;
+	font-size: 12px;
+}
+
+.chat-popup .chat-header-right {
+	float: right;
+}
+
+.chat-popup .chat-header-left {
+	display: inline-block;
+}
+
+.chat-popup .card-header{
+	
+	padding: .3rem 0.5rem !important;
+	background-color: transparent;
+	background: #f5f5f5;
+}
+
+.chat-popup .card-body{
+	
+	padding: 0.5rem !important;
+	max-height: 250px;
+	min-height: 250px;
+    overflow: auto;
+    background: #e6eaea;
+}
+
+.chat-popup .message-container ul{
+	list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat-popup .message-container ul .recieve img{
+	float: left;
+	width: 30px;
+	/* height: 10px; */
+	border-radius: 50%;
+	
+}
+
+.chat-popup .message-container ul .recieve p{
+	display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 240px;
+    line-height: 130%;
+    background: #435f7a;
+    color: #f5f5f5;
+	
+}
+
+.chat-popup .message-container ul .sent p{
+	display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 240px;
+    line-height: 130%;
+    background: #f5f5f5;
+    color: #32465a;
+}
+
+.chat-popup .message-container ul .sent img{
+	float: right;
+	width: 30px;
+	/* height: 10px; */
+	border-radius: 50%;
+}
+
+.hide {
+	
+	display: none !important;
+}
+
+.display-block {
+	display: block !important; 
+}
+
+.message-compose .msg-input {
+	
+	font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+    float: left;
+    border: none;
+    width: calc(100% - 78px);
+    padding: 11px 32px 10px 8px;
+    font-size: 0.8em;
+    color: #32465a;
+}
+
+.message-compose-container {
+	background: #e6eaea;
+}
+
+.message-compose-container .attach{
+	display: inline-block;
+    padding: 9px 12px;
+}
+
+.message-compose-container .send{
+	display: inline-block;
+    padding: 9px 12px;
+    background: #435f7a;
+}
 
 </style>
 </head>
@@ -1629,8 +1753,11 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 	</div>
 	
 	<%@ include file = "common_likelist.jsp" %>
+	<%@ include file = "common.jsp" %>
 </body>
 </html>
+
+
 <!-- 
 https://blackrockdigital.github.io/startbootstrap-sb-admin/ 
 https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/

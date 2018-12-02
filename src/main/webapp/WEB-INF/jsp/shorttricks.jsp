@@ -87,41 +87,61 @@
 	<div class="online-users-container">
 		<div class="chat-list-div">
 			<ul>
-				<li>
+				<li id="101" data-name="Sumit">
 					<div style="position: relative;">
-						<a href="">
+						<a href="#">
 							<span><img src="<c:url value="/resources/images/avatar/avtar5.png" />" alt="user-image"  class="img-circle"></span>
-								<span class="chat-user-name">Sunil Jaiswal</span>
+								<span class="chat-user-name">Sumit Nagar</span>
 								<span class="chat-bullet"> <i class="fa fa-circle" aria-hidden="true"></i></span>
 						</a>
 					</div>
 				</li>
 				
-				<li>
+				<li id="102" data-name="SKP">
 					<div style="position: relative;">
-						<a href="">
+						<a href="#">
 							<span><img src="<c:url value="/resources/images/avatar/avtar2.png" />" alt="user-image"  class="img-circle"></span>
-								<span class="chat-user-name">Sunil Jaiswal</span>
+								<span class="chat-user-name">SKP Jaiswal</span>
 								<span class="chat-bullet"> <i class="fa fa-circle" aria-hidden="true"></i></span>
 						</a>
 					</div>
 				</li>
 				
-				<li>
+				<li id="103" data-name="Amit" data-img-url="<c:url value='/resources/images/avatar/avtar3.png' />">
 					<div style="position: relative;">
-						<a href="">
+						<a href="#">
 							<span><img src="<c:url value="/resources/images/avatar/avtar3.png" />" alt="user-image"  class="img-circle"></span>
-								<span class="chat-user-name">Vishal Porwal</span>
+								<span class="chat-user-name">Amit Porwal</span>
 								<span class="chat-bullet"> <i class="fa fa-circle" aria-hidden="true"></i></span>
 						</a>
 					</div>
 				</li>
 
-				<li>
+				<li id="104" data-name="Neeraj">
 					<div style="position: relative;">
-						<a href="">
+						<a href="#">
 							<span><img src="<c:url value="/resources/images/avatar/avtar4.png" />" alt="user-image"  class="img-circle"></span>
-								<span class="chat-user-name">Abhinav Sen</span>
+								<span class="chat-user-name">Neeraj Sen</span>
+								<span class="chat-bullet"> <i class="fa fa-circle" aria-hidden="true"></i></span>
+						</a>
+					</div>
+				</li>
+				
+				<li id="105" data-name="Sorav">
+					<div style="position: relative;">
+						<a href="#">
+							<span><img src="<c:url value="/resources/images/avatar/avtar4.png" />" alt="user-image"  class="img-circle"></span>
+								<span class="chat-user-name">Sorav Sen</span>
+								<span class="chat-bullet"> <i class="fa fa-circle" aria-hidden="true"></i></span>
+						</a>
+					</div>
+				</li>
+				
+				<li id="106" data-name="Lokesh">
+					<div style="position: relative;">
+						<a href="#">
+							<span><img src="<c:url value="/resources/images/avatar/avtar4.png" />" alt="user-image"  class="img-circle"></span>
+								<span class="chat-user-name">Lokesh Sen</span>
 								<span class="chat-bullet"> <i class="fa fa-circle" aria-hidden="true"></i></span>
 						</a>
 					</div>
@@ -135,18 +155,12 @@
 <!-- Post a trick modal -->
 
 
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+<!-- <div class="chat-popup" id="myForm" style=" position: fixed;  bottom: 0;  right: 163px;  border: 3px solid #f1f1f1;  z-index: 9; width: 100px; height: 100px; background-color: red;">
+  
+  
+  
 </div>
-
+ -->
 <!-- Modal -->
 <div class="modal fade" id="post-trick-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
