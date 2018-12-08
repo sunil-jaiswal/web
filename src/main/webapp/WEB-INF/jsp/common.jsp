@@ -6,7 +6,7 @@
 
 <noscript type="text/x-template" id="chat-popup-container">
 	<div class="chat-popup" id="myForm_<@=id@>" style="position: fixed;bottom: 0;right: <@=right@>px;width: 350px;">
-	  <div class="card">
+	  <div class="card" data-id="<@=id@>">
 	  <div class="card-header pointer">
 	    <span class="chat-u-img"><img src="<c:url value="/resources/images/avatar/avtar3.png" />" alt="user-image"  class="img-circle"></span>
 	    <div class="header-user-body">

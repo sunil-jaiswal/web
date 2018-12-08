@@ -149,7 +149,7 @@
 			
 			position:absolute;
 			width: 230px;
-			height: 1000px;
+			/* height: 2000px; */
 			background: #2c3e50;
 			margin-top: 50px;
 			float: left;
@@ -1055,6 +1055,10 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 	border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
+.border-right {
+	border-right: 1px solid rgba(0,0,0,.125);
+}
+
 .create-suggetions  .card-footer{
 	border-top: none;
 	font-size: 14px;
@@ -1555,6 +1559,123 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
     background: #435f7a;
 }
 
+.company-holder{
+	padding-bottom: 10px;
+	margin: 0;
+	border-top: 4px solid #2b3643;
+	border-radius: 5px;
+	background: #e6eaea;
+}    
+.pd-top-10 {
+	padding-top: 10px;	
+}
+
+.pd-left-10 {
+	padding-left: 10px;
+}
+
+.pd-right-10{
+	padding-right: 10px;
+}
+
+.comp-name i{
+	color: #007bff;
+}
+
+.comp-text {
+	color: #1384C6;
+	font-weight: 600;
+}
+
+/* .papers-main-container{
+	    margin-right: 160px !important;
+} */
+
+.company-questions-container{
+	margin-top:  10px;
+}
+
+.company-questions-container .card-header{
+	background: transparent;
+}
+
+.company-questions-container .card:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.company-questions-container .card-header img{
+	width: 50px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+}
+
+.company-questions-container .card-header .paper-user-quality{
+	line-height: 27px;
+    display: table;
+}
+
+.company-questions-container .card-header .paper-user-quality i{
+	color:#5b9bd1;
+}
+
+.company-questions-container .card-header .paper-user-quality i:not(:first-child){
+	padding-left: 5px;
+}
+
+.company-questions-container .card-header .paper-user-name{
+    font-weight: 600;
+    color: #5b9bd1;
+}
+
+.papaer-user-div  {
+	padding-right: 10px;
+    display: inline;
+    float: left;
+}
+
+.paper-asked-in  {
+	padding-left: 10px;
+    display: inline;
+    float: left;
+}
+
+.paper-asked-in .asked-in {
+	color: #959fad;
+}
+
+.paper-asked-in .comp-name {
+	color: #5b9bd1;
+}
+.paper-asked-in .paper-time{
+	 display: table;
+}
+
+.paper-asked-in .paper-time i{
+	 color: #5b9bd1;
+}
+
+.progress-bar {
+  transition-duration: 3s;
+}
+
+.maragin-rt-60 {
+
+	margin-right: 160px !important;
+}
+
+.margin-bt-10 {
+	margin-bottom: 10px;
+}
+
+.common-quiz {
+	float: left;
+}
+
+.bb-dashed {
+	border-bottom:  1px dashed rgba(0,0,0,.125);
+}
+
 </style>
 </head>
 <body>
@@ -1686,9 +1807,9 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 								<div class="dropdown-menu">
 							      <div class="profile-drop">
 							      	<ul>
-							      		<li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Setting</a></li>
-							      		<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
-							      		<li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+							      		<li><a href="setting"><i class="fa fa-wrench" aria-hidden="true"></i> Setting</a></li>
+							      		<li><a href="profile"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+							      		<li><a href="logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
 							      	</ul>
 							      </div>
 							    </div>
@@ -1736,16 +1857,16 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 			<div class="container-fluid">
   				<!-- Main container code goes here starts-->
   					<div class="tab-content">
-					    <div class="tab-pane fade in active show" id="dashboard"><%@ include file = "dashboard.jsp" %></div>
-					    <div class="tab-pane fade" id="newsfeeds"><%@ include file = "newsfeeds.jsp" %></div>
-					    <div class="tab-pane fade" id="findjobs"><%@ include file = "findjobs.jsp" %></div>
-					    <div class="tab-pane fade" id="shorttricks"><%@ include file = "shorttricks.jsp" %></div>
-					    <div class="tab-pane fade" id="askaquestion">...Content...</div>
-					    <div class="tab-pane fade" id="#shareexperience">...Content...</div>
-					    <div class="tab-pane fade" id="#placementpapers">...Content...</div>
-					    <div class="tab-pane fade" id="#trackstatus">...Content...</div>
-					    <div class="tab-pane fade" id="#tutorials">...Content...</div>
-					    <div class="tab-pane fade" id="#quiz">...Content...</div>
+					    <div class="tab-pane fade in active show maragin-rt-60" id="dashboard"><%@ include file = "dashboard.jsp" %></div>
+					    <div class="tab-pane fade maragin-rt-60" id="newsfeeds"><%@ include file = "newsfeeds.jsp" %></div>
+					    <div class="tab-pane fade maragin-rt-60" id="findjobs"><%@ include file = "findjobs.jsp" %></div>
+					    <div class="tab-pane fade maragin-rt-60" id="shorttricks"><%@ include file = "shorttricks.jsp" %></div>
+					    <div class="tab-pane fade maragin-rt-60" id="askaquestion">...Content...</div>
+					    <div class="tab-pane fade maragin-rt-60" id="shareexperience"><%@ include file ="shareexperience.jsp" %></div>
+					    <div class="tab-pane fade maragin-rt-60" id="placementpapers"><%@ include file = "placementpapers.jsp" %></div>
+					    <div class="tab-pane fade maragin-rt-60" id="trackstatus"><%@include file="trackstatus.jsp" %></div>
+					    <div class="tab-pane fade maragin-rt-60" id="tutorials">...Content...</div>
+					    <div class="tab-pane fade maragin-rt-60" id="quiz"><%@include file="quiz.jsp" %></div>
 					</div>
   				<!-- Main container code goes here ends-->
 			</div>
@@ -1754,6 +1875,7 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 	
 	<%@ include file = "common_likelist.jsp" %>
 	<%@ include file = "common.jsp" %>
+	<%@ include file = "onlineusers.jsp" %>
 </body>
 </html>
 
@@ -1763,4 +1885,6 @@ https://blackrockdigital.github.io/startbootstrap-sb-admin/
 https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/
 http://gambolthemes.net/html/workwise/index.html
 http://preview.themeforest.net/item/friend-finder-social-network-html5-template/full_screen_preview/18711273?ref=cirvitis&clickthrough_id&redirect_back=true
+https://colorlib.com/etc/bwiz/colorlib-wizard-4/index.html
+https://colorlib.com/polygon/sufee/index.html
 -->

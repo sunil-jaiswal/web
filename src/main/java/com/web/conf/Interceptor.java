@@ -20,7 +20,7 @@ public class Interceptor extends HandlerInterceptorAdapter {
 
 	    String requestUrl = request.getRequestURL().toString();
 	    String path = requestUrl.split("/")[requestUrl.split("/").length - 1];
-	    if ((!path.equalsIgnoreCase("login")  && !path.equalsIgnoreCase("logout") && !path.equalsIgnoreCase("authenticate") && ((null == request.getSession(false)) || (null == request.getSession(false).getAttribute("id"))))) {
+	    if ((!path.equalsIgnoreCase("profile") && !path.equalsIgnoreCase("login")  && !path.equalsIgnoreCase("logout") && !path.equalsIgnoreCase("authenticate") && ((null == request.getSession(false)) || (null == request.getSession(false).getAttribute("id"))))) {
 	      response.setHeader("REQUEST_STATUS", "401");
 	      response.setStatus(401);
 	      request.getRequestDispatcher("login?code=1").forward(request, response);

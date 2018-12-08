@@ -114,13 +114,40 @@ jQuery(function($){
 			})
 			right = right + popupWidth;
 		}
+		
+		$('#myForm_'+arry[0]).find('.msg-input').focus();
 	}
 	
 	$(document).off('click','.crossme').on('click','.crossme', function(event){
 		
-		event.stopPropagation();
-		
 		let liId = $(this).data('id')+'';
+		crossChat(liId);
+		
+	})
+	
+	// chat box ends
+	
+	$(document).off('click', '.chat-popup .card-header').on('click', '.chat-popup .card-header', function(){
+		
+		$card = $(this).parents('.card');
+		$body = $card.find('.card-body');
+		if($body.hasClass('hide')){
+			$body.addClass('display-block').removeClass('hide');
+			$card.find('.chat-u-img').show();
+			$card.find('.message-count').show();
+			$card.find('.message-compose-container').show();
+			
+		}else{
+			$body.removeClass('display-block').addClass('hide');
+			$card.find('.chat-u-img').hide();
+			$card.find('.message-count').hide();
+			$card.find('.message-compose-container').hide();
+		}
+	})
+	
+	function crossChat(liId){
+		
+		event.stopPropagation();
 		
 		if ($.inArray(liId, userArr) != -1){
 			  userArr.splice($.inArray(liId, userArr), 1);
@@ -128,26 +155,17 @@ jQuery(function($){
 			  
 		 }
 		showPopupBox();
-		
-	})
+	}
 	
-	// chat box ends
-	
-	$(document).off('click', '.chat-popup .card-header').on('click', '.chat-popup .card-header', function(){
-		$body = $(this).parents('.card').find('.card-body');
-		if($body.hasClass('hide')){
-			$body.addClass('display-block').removeClass('hide');
-			$(this).find('.chat-u-img').show();
-			$(this).find('.message-count').show();
-			$(this).parents('.card').find('.message-compose-container').show();
-			
-		}else{
-			$body.removeClass('display-block').addClass('hide');
-			$(this).find('.chat-u-img').hide();
-			$(this).find('.message-count').hide();
-			$(this).parents('.card').find('.message-compose-container').hide();
-		}
-		
+	$(document).off('keyup', '.msg-input').on('keyup', '.msg-input', function(e){
+		  if (e.keyCode === 13) {
+			  
+		  }     // enter
+		  if (e.keyCode === 27) {
+			  let id = $(this).parents('.card').data('id')+'';
+			  crossChat(id);
+		  }// esc
+
 	})
 	
 });

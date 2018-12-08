@@ -97,10 +97,15 @@ public class LoginController {
 	  public String logOutUser(Model model, HttpSession session, HttpServletRequest request) {
 
 	    // invalidate the session
-	    
 	    String redirectUrl = "redirect:/login";
 	    session.invalidate();
 	    return redirectUrl;
+	  }
+	
+	@RequestMapping(value = "/profile")
+	  public String profile(Model model, HttpServletRequest request) throws JsonParseException, JsonMappingException, IOException {
+
+	    return "profile";
 	  }
 
 }
