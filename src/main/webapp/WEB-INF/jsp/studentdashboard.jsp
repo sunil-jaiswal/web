@@ -1850,6 +1850,8 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
 					<li><a data-toggle="tab" href="#trackstatus"><span> <i class="fa fa-spinner" aria-hidden="true"></i></span><span> Track status</span></a></li>
 					<li><a data-toggle="tab" href="#tutorials"><span> <i class="fa fa-video-camera" aria-hidden="true"></i></span><span> Tutorials</span></a></li>
 					<li><a data-toggle="tab" href="#quiz"><span> <i class="fa fa-television" aria-hidden="true"></i></span><span> Quiz</span></a></li>
+					<li><a data-toggle="tab" href="#quiz"><span> <i class="fa fa-television" aria-hidden="true"></i></span><span> My posts</span></a></li>
+					<li><a data-toggle="tab" href="#quiz"><span> <i class="fa fa-television" aria-hidden="true"></i></span><span> My connections</span></a></li>
 				</ul>
 			</div>
 		</div>
